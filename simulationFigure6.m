@@ -1,8 +1,8 @@
 %This Matlab script can be used to generate Figure 6 in the article:
 %
-%Emil Bj?rnson, Michail Matthaiou, M?rouane Debbah, ?Massive MIMO with
-%Arbitrary Non-Ideal Arrays: Hardware Scaling Laws and Circuit-Aware
-%Design,? IEEE Transactions on Wireless Communications, To appear.
+%Emil Björnson, Michail Matthaiou, Mérouane Debbah, "Massive MIMO with
+%Non-Ideal Arbitrary Arrays: Hardware Scaling Laws and Circuit-Aware
+%Design," IEEE Transactions on Wireless Communications, To appear.
 %
 %Download article: http://arxiv.org/abs/1409.0875
 %
