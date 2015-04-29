@@ -1,4 +1,4 @@
-Massive MIMO with Arbitrary Non-Ideal Arrays
+Massive MIMO with Non-Ideal Arbitrary Arrays
 ==================
 
 This is a code package is related to the follow scientific article:
