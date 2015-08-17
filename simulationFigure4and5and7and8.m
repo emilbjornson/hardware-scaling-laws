@@ -3,7 +3,8 @@
 %
 %Emil Björnson, Michail Matthaiou, Mérouane Debbah, "Massive MIMO with
 %Non-Ideal Arbitrary Arrays: Hardware Scaling Laws and Circuit-Aware
-%Design," IEEE Transactions on Wireless Communications, To appear.
+%Design," IEEE Transactions on Wireless Communications, vol. 14, 
+%no. 8, pp. 4353-4368, August 2015.
 %
 %Download article: http://arxiv.org/abs/1409.0875
 %
