@@ -70,7 +70,7 @@ B = Ksite; %Pilot length
 
 Tdifferent = [20:20:800 900:200:2500]; %Different lengths of the coherence block
 
-shadowFadingStandardDeviation = 10^(5/10); %5 dB shadow fading standard deviation
+shadowFadingStandardDeviation = 5; %5 dB shadow fading standard deviation
 
 %Define the size of the square cells in the simulation
 intersiteDistance = 0.25; %Distance between the middle of two adjacent cells (in vertical or horizontal direction)
