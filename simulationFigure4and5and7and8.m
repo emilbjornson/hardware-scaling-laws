@@ -252,7 +252,7 @@ Ksite = 8; %Number of users per site
 
 B = Ksite; %Pilot length
 T = 500; %Coherence time
-shadowFadingStandardDeviation = 10^(5/10); %5 dB shadow fading standard deviation
+shadowFadingStandardDeviation = 5; %5 dB shadow fading standard deviation
 
 %Define the size of the square cells in the simulation
 intersiteDistance = 0.25; %Distance between the middle of two adjacent cells (in vertical or horizontal direction)
