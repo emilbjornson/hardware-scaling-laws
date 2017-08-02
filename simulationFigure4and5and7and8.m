@@ -8,7 +8,7 @@
 %
 %Download article: http://arxiv.org/abs/1409.0875
 %
-%This is version 1.0 (Last edited: 2015-04-06)
+%This is version 1.1 (Last edited: 2017-08-02)
 %
 %License: This code is licensed under the GPLv2 license. If you in any way
 %use this code for research that results in publications, please cite our
