@@ -255,9 +255,9 @@ T = 500; %Coherence time
 shadowFadingStandardDeviation = 5; %5 dB shadow fading standard deviation
 
 %Define the size of the square cells in the simulation
-intersiteDistance = 0.25; %Distance between the middle of two adjacent cells (in vertical or horizontal direction)
+intersiteDistance = 0.25; %Distance (in km) between the middle of two adjacent cells (in vertical or horizontal direction)
 intersiteDistanceHalf = intersiteDistance/2; %Half the inter-cell distance
-minimalUserDistance = 0.025; %Minimal distance between a user and the different locations where the base station might have its antennas (5 different locations)
+minimalUserDistance = 0.025; %Minimal distance (in km) between a user and the different locations where the base station might have its antennas (5 different locations)
 
 Ktotal = nbrOfSimulationSetups * Ksite; %Total number of user location per cell (over all setups)
 
@@ -393,7 +393,8 @@ for s = 1:nbrOfSimulationSetups
     
     
     %Compute all channel variances for colocated deployment and scale
-    %based on the channel-inversion power control
+    %based on the channel-inversion power control. Note that the distances 
+    %are measured in kilometer and not meter as in Eq. (33) of the paper
     if runColocatedDeployment == true
         shadowFadingRealizationsColocated = randn(BSs,BSs,Ksite);
         lambdaColocatedOriginal = 10.^( -(128.1+37.6*log10(distancesColocated(:,:,userIndices)) + shadowFadingStandardDeviation*shadowFadingRealizationsColocated + noiseFloordBm)/10);
@@ -407,7 +408,8 @@ for s = 1:nbrOfSimulationSetups
     end
     
     %Compute all channel variances for distributed deployment and scale
-    %based on the channel-inversion power control
+    %based on the channel-inversion power control. Note that the distances 
+    %are measured in kilometer and not meter as in Eq. (33) of the paper
     if runDistributedDeployment == true
         shadowFadingRealizationsDistributed = randn(A,BSs,BSs,Ksite);
         lambdaDistributedOriginal = 10.^( -(128.1+37.6*log10(distancesDistributed(:,:,:,userIndices)) + shadowFadingStandardDeviation*shadowFadingRealizationsDistributed + noiseFloordBm)/10);
