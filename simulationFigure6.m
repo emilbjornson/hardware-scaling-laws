@@ -7,7 +7,7 @@
 %
 %Download article: http://arxiv.org/abs/1409.0875
 %
-%This is version 1.0 (Last edited: 2015-04-06)
+%This is version 1.1 (Last edited: 2017-08-02)
 %
 %License: This code is licensed under the GPLv2 license. If you in any way
 %use this code for research that results in publications, please cite our
@@ -73,9 +73,9 @@ Tdifferent = [20:20:800 900:200:2500]; %Different lengths of the coherence block
 shadowFadingStandardDeviation = 5; %5 dB shadow fading standard deviation
 
 %Define the size of the square cells in the simulation
-intersiteDistance = 0.25; %Distance between the middle of two adjacent cells (in vertical or horizontal direction)
+intersiteDistance = 0.25; %Distance (in km) between the middle of two adjacent cells (in vertical or horizontal direction)
 intersiteDistanceHalf = intersiteDistance/2; %Half the inter-cell distance
-minimalUserDistance = 0.025; %Minimal distance between a user and the different locations where the base station might have its antennas (5 different locations)
+minimalUserDistance = 0.025; %Minimal distance (in km) between a user and the different locations where the base station might have its antennas (5 different locations)
 
 Ktotal = nbrOfSimulationSetups * Ksite; %Total number of user location per cell (over all setups)
 
@@ -150,7 +150,8 @@ for s = 1:nbrOfSimulationSetups
     userIndices = s:nbrOfSimulationSetups:Ktotal;
     
     
-    %Compute all channel variances for distributed deployment
+    %Compute all channel variances for distributed deployment. Note that the distances 
+    %are measured in kilometer and not meter as in Eq. (33) of the paper
     shadowFadingRealizationsDistributed = randn(A,BSs,BSs,Ksite);
     lambdaDistributedOriginal = 10.^( -(128.1+37.6*log10(distancesDistributed(:,:,:,userIndices)) + shadowFadingStandardDeviation*shadowFadingRealizationsDistributed + noiseFloordBm)/10);
     
